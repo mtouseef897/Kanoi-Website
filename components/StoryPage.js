@@ -50,7 +50,7 @@ const StoryPage = () => {
       <div className="overlay"></div>
       {
         storyPageCount === 14 && <>
-        <img className="w-full h-full object-cover" src="/illustrations/transition.gif" />
+        {/* <img className="w-full h-full object-cover" src="/illustrations/transition.gif" /> */}
         {/* <video
           src={`/illustrations/smoke.webm`}
           autoPlay
@@ -75,7 +75,7 @@ const StoryPage = () => {
       )}
       {storyPageCount === 12 && (
         <>
-        <img className="w-full h-full object-cover" src="/illustrations/transition.gif" />
+        {/* <img className="w-full h-full object-cover" src="/illustrations/transition.gif" /> */}
         {/* <video
           src={`/illustrations/smoke.webm`}
           autoPlay
