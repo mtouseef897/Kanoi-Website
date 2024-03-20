@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=Freehand&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@font-face {
+  font-family: "Sofia Pro";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/fonts/Sofia Pro Regular Az.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Sofia Pro";
+  font-style: italic;
+  font-weight: normal;
+  src: url("/fonts/Sofia Pro Regular Italic Az.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Sofia Pro";
+  font-style: normal;
+  font-weight: 200;
+  src: url("/fonts/Sofia Pro ExtraLight Az.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Sofia Pro";
+  font-style: normal;
+  font-weight: 100;
+  src: url("/fonts/Sofia Pro UltraLight Az.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Sofia Pro";
+  font-style: italic;
+  font-weight: 200;
+  src: url("/fonts/Sofia Pro ExtraLight Italic Az.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Sofia Pro";
+  font-style: italic;
+  font-weight: 100;
+  src: url("/fonts/Sofia Pro UltraLight Italic Az.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Sofia Pro";
+  font-style: normal;
+  font-weight: 300l;
+  src: url("/fonts/Sofia Pro Light Az.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Sofia Pro";
+  font-style: italic;
+  font-weight: 300;
+  src: url("/fonts/Sofia Pro Light Italic Az.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Sofia Pro";
+  font-style: normal;
+  font-weight: 500;
+  src: url("/fonts/Sofia Pro Medium Az.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Sofia Pro";
+  font-style: italic;
+  font-weight: 500;
+  src: url("/fonts/Sofia Pro Medium Italic Az.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Sofia Pro";
+  font-style: normal;
+  font-weight: 600;
+  src: url("/fonts/Sofia Pro Semi Bold Az.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Sofia Pro";
+  font-style: italic;
+  font-weight: 600;
+  src: url("/fonts/Sofia Pro Semi Bold Italic Az.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Sofia Pro";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/fonts/Sofia Pro Bold Az.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Sofia Pro";
+  font-style: italic;
+  font-weight: 700;
+  src: url("/fonts/Sofia Pro Bold Italic Az.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Sofia Pro";
+  font-style: normal;
+  font-weight: 800;
+  src: url("/fonts/Sofia Pro Black Az.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Sofia Pro";
+  font-style: italic;
+  font-weight: 800;
+  src: url("/fonts/Sofia Pro Black Italic Az.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Freehand";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/fonts/Freehand-Regular.ttf") format("ttf");
+}
+
+.free-hand {
+  font-family: "Freehand", cursive;
+}
+
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+html {
+  font-family: "Sofia Pro", sans-serif;
+}
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+text-decoration: none;
+list-style: none;
+}
+
+@keyframes spin {
+  0%,25%{
+    transform: rotateZ(0deg);
+  }
+  40%,60%{
+    transform: rotateZ(70deg);
+  }
+  75%,100%{
+    transform: rotateZ(0deg);
+  }
+}
+
+.spinner{
+  animation: spin 2s linear infinite;
+}
+.overlay {
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+
+}
+
+
+/* .img-hover-zoom--sp2 video {
+  transform-origin: 70% 20%;
+  transition: transform 1s , filter .5s ease-out;
+  transform: scale(2.4);
+} */
+.img-hover-zoom video {
+  transform-origin: 50% 30%;
+  transform: scale(1.12);
+}
+
+
+
+.img-hover-zoom--sp2 video {
+  transform-origin: 50% 30%;
+  transition: transform 1s , filter .5s ease-out;
+  transform: scale(2.4) translateX(-12%) translateY(7%);
+}
+
+.img-hover-zoom--sp3 video {
+  transform-origin: 50% 30%;
+  transition: transform 1s , filter .5s ease-out;
+  transform: scale(1.64);
+}
+
+
+/* Slow-motion Zoom Container */
+.img-hover-zoom--sp4 video {
+  transform-origin: 50% 30%;
+  transition: transform 1s , filter .5s ease-out;
+  transform: scale(1.45);
+}
+
+/* Slow-motion Zoom Container */
+.img-hover-zoom--sp5 video {
+  transform-origin: 50% 30%;
+  transition: transform 1s , filter .5s ease-out;
+  transform: scale(1.3);
+}
+
+
+/* Slow-motion Zoom Container */
+.img-hover-zoom--sp6 video {
+  /* transform-origin: 0 0; */
+  transform-origin: 50% 30%;
+  transition: transform 1s, filter .5s ease-out;
+  transform: scale(1.12);
+}
+
+
+.tooltip{
+  opacity: 0;
+}
+
+.hotspot:hover .tooltip{
+  opacity: 1;
+}
+
+/* Horizontal Zoom-n-pan Container */
+/* .img-hover-zoom--sp7 video {
+  transition: transform .5s ease-in-out;
+  transform: scale(1.4);
+  transform-origin: 100% 0;
+  transform: scale(1.5) translateX(30%);
+} */
+
+
