@@ -27,7 +27,7 @@ const [yoffset,setYOffSet]=useState(yValues[storyPageCount]);
       position: "absolute",
       left: `${xoffset}%`,
       top: `${yoffset}%`,
-  }} className={`flex items-center justify-center w-[68px] h-[68px] rounded-full ${bebas_neue.className} transition-all ease-linear duration-500`} >
+  }} className={`hidden md:flex items-center justify-center w-[68px] h-[68px] rounded-full ${bebas_neue.className} transition-all ease-linear duration-500`} >
 
         {/* Wrapper */}
         <div className={` absolute border-2 rounded-full  ${isActive ? 'border-solid' : 'border-dashed'} 

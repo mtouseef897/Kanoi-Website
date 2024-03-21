@@ -36,7 +36,7 @@ const Preloader= ({ handleIsLoaded }) => {
       else {
         handleIsLoaded();
       }
-    }, 50); 
+    }, 300); 
 
     return () => clearInterval(timer);
   }, [counterIndex]);
