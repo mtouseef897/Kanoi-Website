@@ -6,7 +6,7 @@ import { Bebas_Neue } from 'next/font/google'
 //Font
 const bebas_neue = Bebas_Neue({ subsets: ['latin'],weight:['400']})
 
-const Preloader= ({ handleIsLoaded }) => {
+const Preloader= ({ handleIsLoaded,handlePlayTransition }) => {
 
   const [counter, setCounter] = useState([0,14,21,37,45,58,62,73,81,94,100]);
   const [counterIndex,setCounterIndex]=useState(0);
@@ -34,7 +34,13 @@ const Preloader= ({ handleIsLoaded }) => {
 
       }
       else {
-        handleIsLoaded();
+        handlePlayTransition();
+        setTimeout(
+          ()=>{
+            handleIsLoaded();
+          },300
+        )
+        
       }
     }, 300); 
 

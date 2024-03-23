@@ -27,11 +27,11 @@ const MobileContentOverview = () => {
     <>
     {/* onClick={()=>handleSectionClick('Kanoi trading')} */}
 
-        <div className="h-fit w-[97%] mx-auto sticky top-[100px] z-20">
-        <div onClick={()=>setIsActiveMenu(!isActiveMenu)} className="flex justify-between items-center xl:hidden z-[10] w-full mx-auto text-[16px] font-[500] leading-[22px] mt-[20px] p-[12px] rounded-md sticky top-[40px] bg-[#FAFAFA] border border-[#E5E5E7] ">
+        <div className="h-fit w-[91.4%] md:w-[95.8%] mx-auto sticky mt-[17px] md:mt-[25px] top-[81px] z-20 ">
+        <div onClick={()=>setIsActiveMenu(!isActiveMenu)} className="flex justify-between items-center xl:hidden w-full mx-auto text-[16px] font-[500] leading-[22px]  p-[12px] rounded-md  bg-[#FAFAFA] border border-[#E5E5E7] ">
                 {activeSection} {isActiveMenu?<MdOutlineKeyboardArrowUp className="text-[20px]"/>:<MdKeyboardArrowDown className="text-[20px]"/>}
         </div>
-        <ul className={`${isActiveMenu?"flex":"hidden"} slide-fade-in-top absolute  left-0 right-0 wpmobilemenu  xl:hidden z-[10]  mx-auto text-[16px] font-[500] leading-[22px] mt-[4px] p-[12px] rounded-md  top-[50px] bg-[#FAFAFA] border border-[#E5E5E7] `}>
+        <ul className={`${isActiveMenu?"flex":"hidden"} slide-fade-in-top absolute  left-0 right-0 wpmobilemenu  xl:hidden   mx-auto text-[16px] font-[500] leading-[22px] mt-[3px] p-[12px] rounded-md  top-[50px] bg-[#FAFAFA] border border-[#E5E5E7] `}>
                 <li onClick={()=>handleSectionClick('Kanoi trading')}>The Kanoi trading card game</li>
                 <li onClick={()=>handleSectionClick('digital asset')}>Card as a digital asset</li>
                 <li onClick={()=>handleSectionClick('Kanoi ecosystem')}>Kanoi ecosystem</li>

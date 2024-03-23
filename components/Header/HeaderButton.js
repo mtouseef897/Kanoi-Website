@@ -17,8 +17,8 @@ const HeaderButton = () => {
         Follow for updates
     </button>
     <div onClick={handleIsDropDownActive} className="h-[38px] w-[38px] md:hidden">
-      {!isDropDownActive&&<img src={`${isExploreMode?"/Header/menu_white.png":"/Header/menu_black.png"}`} className="w-full h-full object-cover"/>}
-      {isDropDownActive&&<img src={`${isExploreMode?"/Header/ddmenuwhite.png":"/Header/ddmenublack.png"}`} className="w-full h-full object-cover"/>}
+      {!isDropDownActive&&<img src={`${isExploreMode?"/Header/menu_white.png":"/Header/menu_black.png"}`} className="w-full h-full object-cover rotate-back "/>}
+      {isDropDownActive&&<img src={`${isExploreMode?"/Header/ddmenuwhite.png":"/Header/ddmenublack.png"}`} className="w-full h-full object-cover rotate-front "/>}
     </div>
     </>
   )

@@ -15,25 +15,16 @@ export default function Home() {
 
   //States Defination 
   const [isLoaded,setIsLoaded]=useState(false);
-  const [playGif, setPlayGif] = useState(false);
+  const [playTransition, setPlayTransition] = useState(false);
 
   //Handle Methods
   const handleIsLoaded=()=>{
     setIsLoaded(true);
   }
 
-  const handleGifFinish = () => {
-    // Set playGif to false after a delay of 2000 milliseconds (2 seconds)
-    setTimeout(() => {
-      setPlayGif(false);
-    }, 550);
-  };
-
-  useEffect(() => {
-    if (isLoaded) {
-      setPlayGif(true);
-    }
-  }, [isLoaded]);
+  const handlePlayTransition=()=>{
+    setPlayTransition(true);
+  }
 
 //Return Content
   return (
@@ -42,22 +33,22 @@ export default function Home() {
         <WhitePaperModeContextProvider>
            <StoryPageContextProvider>
               <DropDownMenuContextProvider>
-                  {!isLoaded && <PreLoader handleIsLoaded={handleIsLoaded}/>  }
+                  {!isLoaded && <PreLoader handleIsLoaded={handleIsLoaded} handlePlayTransition={handlePlayTransition}/>  }
 
                   
-                  { isLoaded &&  <OpacityWrapper> <video
-                      src={`/Transitions/transition2.webm`}
+                  { playTransition &&  <> <video
+                      src={`/Transitions/newsmoke.webm`}
                       autoPlay
                       loop={false}
                       muted
                       playsInline
-                      className="absolute top-0 left-0 h-full w-full object-cover  "
-                    ></video></OpacityWrapper>}
+                      className="absolute top-0 left-0 h-full w-full object-cover "
+                    ></video></>}
 
                   {/* {isLoaded && playGif && <OpacityWrapper> <img src="/Transitions/transition.gif"    onLoad={handleGifFinish}   className="absolute top-0 left-0 h-full w-full object-cover z-10 "/></OpacityWrapper> } */}
 
                   { 
-                    isLoaded &&  <PreloaderEffect>    <TopPage/>     </PreloaderEffect>
+                    isLoaded && <>    <TopPage/>     </>
                   }
                   </DropDownMenuContextProvider>
               </StoryPageContextProvider>

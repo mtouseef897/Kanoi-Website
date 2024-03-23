@@ -14,26 +14,18 @@ const Header = () => {
     return (
       <>
       <header
-       className={`z-[10] w-[97%] mx-auto border mt-[20px]  flex flex-col  justify-between pl-[16px] pr-[8px] rounded-md sticky top-[20px] 
+       className={`z-[60] w-[91.4%] md:w-[95.8%] mx-auto border   flex flex-col  justify-between pl-[16px] pr-[8px] rounded-md sticky top-[12px] md:top-[20px] mt-[12px] md:mt-[20px]
        ${isExploreMode?"bg-black/[0.34] backdrop-blur border-[#1F1F1F] opacity-[1] md:opacity-[0] md:hover:opacity-[1] transition-all duration-500 ease-out":"bg-[#111111]/[0.04] border-gray-300"} 
        ${isWhitePaperMode && "bg-[#FAFAFA] border-[#E5E5E7]"}`}>
-         <div className="flex justify-between items-center py-[12px]">
+         <div className={`flex justify-between items-center py-[12px] ${isDropDownActive?"border-b-[1px] border-[#E5E5E7]":""}`}>
               <HeaderLogo/>
               <HeaderButton/>
           </div>
-         {isDropDownActive&& <div onClick={()=>{handleIsWhitePaperMode(true);handleIsDropDownActive();handleIsExploreMode(false)}} className={`${isExploreMode?"text-white":""} py-[12px] bebas-neue-regular border-t-[1px] border-[#E5E5E7] text-[28px]`}>
+         {isDropDownActive&& <div onClick={()=>{handleIsWhitePaperMode(true);handleIsDropDownActive();handleIsExploreMode(false)}} className={`${isExploreMode?"text-white":""} py-[12px] bebas-neue-regular  text-[28px] slide-down`}>
             WHITEPAPER
           </div>}
+     
       </header>
-      {/* <div className="flex flex-col  justify-center w-[97%] mx-auto bg-[#1D1D1B]/[0.02] border-[#E5E5E7] border rounded-lg pl-[16px] pr-[8px] ">
-          <div className="flex justify-between items-center py-[12px]">
-              <HeaderLogo/>
-              <HeaderButton/>
-          </div>
-          <div className="py-[12px] bebas-neue-regular border-t-[1px] border-[#E5E5E7] text-[28px]">
-            WHITEPAPER
-          </div>
-      </div> */}
       </>
     )
   }

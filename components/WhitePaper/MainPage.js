@@ -1,14 +1,30 @@
 import React from "react";
+import WpMainHeading from "./WpElements/WpHeadings.js/WpMainHeading";
+import WpMainPara from "./WpElements/WpParas.js/WpMainPara";
+import WpImage from "./WpElements/WpMedia.js/WpImage";
+import WpSubHeading from "./WpElements/WpHeadings.js/WpSubHeading";
+import WpSubPara from "./WpElements/WpParas.js/WpSubPara";
+import WpSmallHeading from "./WpElements/WpHeadings.js/WpSmallHeading";
+import WpBullet from "./WpElements/WpParas.js/WpBullets";
+import WpSmallPara from "./WpElements/WpParas.js/WpSmallPara";
+import WpTable from "./WpElements/WpMedia.js/WpTable";
+import Rarities from "@/data/Rarities";
+import WpVestingTable from "./WpElements/WpMedia.js/WpVestingTable";
+import WpTokenUsesTable from "./WpElements/WpMedia.js/WpTokenUsesTable";
+
+
 
 const MainPage = () => {
   return (
-    <div className="w-[97%]  xl:w-[800px] gap-[60px] flex-col flex justify-center px-[16px] md:px-[0px] 2xl:mr-[303px]">
+    <div className=" max-w-[800px] mb-[40px] md:mb-[80px]   ">
       {/* Preamble */}
-      <div className="flex flex-col gap-6 ">
-       <h3 className="bebas-neue-regular tracking-[-1px] bebas-neue-regular tracking-[-1px] text-[36px] md:text-[48px] text-[#1D1D1B] font-bold leading-[35px] uppercase">
-          Preamble
-        </h3>
-        <p className=" font-[600] text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+      <div >
+      
+        <h1 className="bebas-neue-regular text-[36px] md:text-[48px] leading-[42px] md:leading-[54px] tracking-[-1px] font-bold   text-[#1D1D1B] uppercase ">
+        Preamble
+        </h1>
+        <WpMainPara>
+          {" "}
           In recent years, the digital gaming landscape has experienced rapid
           growth across various platforms, including PCs, consoles, and
           smartphones. This expansion has led to a vast array of game choices,
@@ -16,16 +32,18 @@ const MainPage = () => {
           experiences. However, this diversity also poses a challenge, as it
           often results in fleeting interactions with games, making it rare to
           find titles that truly captivate players for extended periods.
-        </p>
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+        </WpMainPara>
+        <WpMainPara>
+          {" "}
           The Kanoi Trading Card Game [TCG] leverages blockchain technology to
           forge novel connections with players, a feat not achievable in
           traditional games. By skillfully integrating Japan's renowned media
           mix strategy with NFT culture and meticulously crafting game design,
           it pioneers the development of intellectual property (IP), fostering
           deep player engagement.
-        </p>
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+        </WpMainPara>
+        <WpMainPara>
+          {" "}
           Rooted in a richly developed universe and compelling IP, the Kanoi TCG
           will offer content both digitally and physically. This strategic
           convergence is complemented by innovative game and ecosystem design,
@@ -33,18 +51,17 @@ const MainPage = () => {
           and beyond. The Kanoi TCG promises unparalleled excitement and
           emotions, redefining the gaming experience and beckoning players into
           thrilling new adventures.
-        </p>
-        <div className="w-[343px] md:w-[800px] h-[192px] md:h-[390px] rounded-lg border border-[#E5E5E7]">
-          <img className="w-full h-full" src="/wp/image1.png" />
+        </WpMainPara>
+        <div className="w-[343px] h-[192px] md:w-[800px] md:h-[390px] rounded-lg mt-[20px] md:mt-[32px] overflow-hidden mx-auto">
+            <img className="w-full h-full object-cover " src={`/wp/image1.png`} />
         </div>
       </div>
 
       {/* **** The Kanoi trading card game ********** */}
-      <div className="flex flex-col gap-5">
-      <h3 id="Kanoi trading" className="bebas-neue-regular tracking-[-1px] bebas-neue-regular tracking-[-1px] text-[36px] md:text-[48px] text-[#1D1D1B] font-bold leading-[35px] uppercase">
-          The Kanoi trading card game
-        </h3>
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+      <div id="Kanoi trading">
+        <WpMainHeading>The Kanoi trading card game</WpMainHeading>
+        <WpMainPara>
+          {" "}
           The Kanoi TCG draws inspiration from Japan’s rich folklore of Yokai
           and Onmyoji, timeless narratives that have been passed down through
           generations. Through intricate artwork and animations, it breathes new
@@ -53,16 +70,18 @@ const MainPage = () => {
           offers an immersive experience that fosters profound connections
           between players, the game, its intellectual property (IP), and the
           community.
-        </p>
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+        </WpMainPara>
+        <WpMainPara>
+          {" "}
           By digitizing trading cards as non-fungible tokens (NFTs),
           facilitating peer-to-peer (P2P) transactions, implementing
           play-to-earn (P2E) incentives through smart contracts, and ensuring
           transparency in game rule formulation via decentralized token-centric
           management, it transcends the limitations of traditional TCGs,
           creating an innovative economic sphere.
-        </p>
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+        </WpMainPara>
+        <WpMainPara>
+          {" "}
           Within this economic sphere, players own not only trading cards but
           also their time, skills, and investments as assets, exchangeable for
           real-world value. In addition, they gain the right to directly
@@ -72,44 +91,33 @@ const MainPage = () => {
           represents genuine involvement in this digital realm, offering a
           unique avenue for deep engagement with the game, its IP, and the
           broader community.
-        </p>
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+        </WpMainPara>
+        <WpMainPara>
+          {" "}
           By seamlessly integrating the game, IP, and a token-based ecosystem,
           these three pillars synergize to deliver an unparalleled immersive
           gaming experience and cultivate a vibrant IP. This integrated approach
           allows players to delve deeper into the game world and experience a
           new sense of connection with its IP.
-        </p>
-        <div className="w-[343px] md:w-[800px] h-[192px]   md:h-[446px] rounded-lg border border-[#E5E5E7]">
-          <img className="w-full h-full" src="/wp/image2.png" />
-        </div>
-      </div>
-
-      {/* **** gmlabs ********** */}
-      <div className="flex flex-col gap-5">
-      <h3 className="bebas-neue-regular tracking-[-1px] bebas-neue-regular tracking-[-1px] text-[36px] md:text-[48px] text-[#1D1D1B] font-bold leading-[35px] uppercase">
-          gmlabs
-        </h3>
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+        </WpMainPara>
+        <WpImage Image={"image2.png"} />
+        <WpSubHeading>gmlabs</WpSubHeading>
+        <WpSubPara>
           gmlabs is a Japanese startup responsible for the development of the
           Kanoi TCG. Founded in 2022 with the mission of crafting innovative and
           exciting experiences for global audiences, gmlabs combines Japan's
           rich entertainment culture with next-generation technology. The
           company has secured approximately 80 million JPY in seed funding from
           several Japanese venture capital and corporate venture capital firms.
-        </p>
-
-        <div className="w-[343px] md:w-[800px] h-[192px]   md:h-[446px] rounded-lg border border-[#E5E5E7]">
-          <img className="w-full h-full" src="/wp/image3.png" />
-        </div>
+        </WpSubPara>
+        <WpImage Image={"image3.png"} />
       </div>
 
       {/* **** Card as a digital asset ********** */}
-      <div className="flex flex-col gap-5">
-      <h3 id="digital asset" className="bebas-neue-regular tracking-[-1px] bebas-neue-regular tracking-[-1px] text-[36px] md:text-[48px] text-[#1D1D1B] font-bold leading-[35px] uppercase">
-          Card as a digital asset
-        </h3>
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+      <div id="digital asset">
+        <WpMainHeading>Card as a digital asset</WpMainHeading>
+        <WpMainPara>
+          {" "}
           The Kanoi TCG is a card game that leverages NFT digital assets.
           Players contruct their decks using a diverse selection of cards
           aligned with their chosen strategies, engaging in head-to-head battles
@@ -119,43 +127,32 @@ const MainPage = () => {
           into tangible value in the real world. With its distinctive worldview
           and intricate artistry, The Kanoi TCG presents an extensive array of
           cards that inspire a desire for collection.
-        </p>
-
-        <div className="w-[343px] md:w-[800px] h-[192px]   md:h-[446px] rounded-lg border border-[#E5E5E7]">
-          <img className="w-full h-full" src="/wp/image4.png" />
+        </WpMainPara>
+        {/* <WpImage Image={"image4.png"} /> */}
+        <div className="w-[343px] h-[192px] md:w-[800px] md:h-[446px] rounded-lg mt-[20px] md:mt-[32px] overflow-hidden mx-auto border-[1px] border-[#E5E5E7]">
+            <img className="w-full h-full object-cover " src={`/wp/image4.png`} />
         </div>
-      </div>
-
-      {/* **** Rarities ********** */}
-      <div className="flex flex-col gap-5">
-      <h3 className="bebas-neue-regular tracking-[-1px] bebas-neue-regular tracking-[-1px] text-[32px] text-[#1D1D1B] font-bold leading-[35px] uppercase">
-          Rarities
-        </h3>
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+        <WpSubHeading>Rarities</WpSubHeading>
+        <WpSubPara>
           The cards are categorized into different rarities, each corresponding
           to its scarcity and consequently, its value as an asset. The quantity
           of cards provided is determined by their rarity, with rarer cards
           being more scarce and thus potentially more valuable. Regardless of
           rarity, cards with the same name perform identically within the game.
-        </p>
-        <div className="w-[343px] md:w-[800px] md:h-[639px] h-[794px] rounded-lg border border-[#E5E5E7]">
-          <img className="hidden md:block w-full h-full" src="/wp/content.png" />
-          <img className="md:hidden w-full h-full" src="/wp/wptable.png" />
-        </div>
-      <h3 className="bebas-neue-regular tracking-[-1px] bebas-neue-regular tracking-[-1px] text-[32px] text-[#1D1D1B] font-bold leading-[35px] uppercase">
-          Reprint
-        </h3>
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+        </WpSubPara>
+       
+        <WpTable head1={'Rarities'} head2={'Description'} data={Rarities}/>
+
+        <WpSubHeading>Reprint</WpSubHeading>
+        <WpSubPara>
           Following a community governance vote, certain cards will undergo
           reprinting. These reprinted cards will retain their original
           functionality in the game, but to safeguard the asset value of the
           original cards, the reprints will be distinguished by a mark or other
           identifiable characteristics.
-        </p>
-      <h3 className="bebas-neue-regular tracking-[-1px] bebas-neue-regular tracking-[-1px] text-[32px] text-[#1D1D1B] font-bold leading-[35px] uppercase">
-          Non-NFT cards
-        </h3>
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+        </WpSubPara>
+        <WpSubHeading>Non-NFT cards</WpSubHeading>
+        <WpSubPara>
           Non-NFT cards, obtainable through gameplay or by opening Non-NFT card
           packs, function similarly to NFT cards within the game. However, The
           rate of token acquisition within the Play-to-Earn (P2E) system
@@ -163,15 +160,13 @@ const MainPage = () => {
           who exclusively construct their decks with NFT cards will
           substantially accrue more tokens through the P2E system. Non-NFT cards
           are integrated to streamline players' entry into The Kanoi TCG.
-        </p>
+        </WpSubPara>
       </div>
 
       {/* **** Kanoi ecosystem *********  */}
-      <div className="flex flex-col gap-5">
-       <h3 id="Kanoi ecosystem" className="bebas-neue-regular tracking-[-1px] text-[36px] md:text-[48px] text-[#1D1D1B] font-bold leading-[35px] uppercase">
-          Kanoi ecosystem
-        </h3>
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+      <div id="Kanoi ecosystem">
+        <WpMainHeading>Kanoi ecosystem</WpMainHeading>
+        <WpMainPara>
           The ecosystem of The Kanoi TCG is designed to empower the community in
           participating and governing various developmental aspects that
           significantly influence the ecosystem’s future. This transparent and
@@ -179,35 +174,31 @@ const MainPage = () => {
           continuously with the community. Operated by the community, this
           decentralized ecosystem is established by the Isekai Foundation
           [Isekai].
-        </p>
-       <h3 className="bebas-neue-regular tracking-[-1px] text-[32px] text-[#1D1D1B] font-bold leading-[35px] uppercase">
-          Isekai Foundation
-        </h3>
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+        </WpMainPara>
+
+        <WpSubHeading>Isekai Foundation</WpSubHeading>
+        <WpSubPara>
           Isekai is a foundation established to construct and support the
           ecosystem of The Kanoi TCG. It furnishes the infrastructure, including
           tokens, necessary to establish a decentralized, community-driven
           ecosystem. The community, rather than Isekai, determines the
-          subsequent evolution of the ecosystem.
-        </p>
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+          subsequent evolution of the ecosystem
+        </WpSubPara>
+        <WpMainPara>
           Isekai receives 5% of the secondary distribution of The Kanoi TCG on
           supported platforms as royalties. This allocation is earmarked for
           development and marketing expenditures aimed at sustaining and
           expanding the ecosystem.
-        </p>
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+        </WpMainPara>
+        <WpMainPara>
           gmlabs is entitled to receive token grants and rewards from Isekai for
           its contributions to community and ecosystem growth through
           development and marketing initiatives within The Kanoi TCG ecosystem.
-        </p>
-        <div className="w-[343px] md:w-[800px] h-[192px]   md:h-[446px] rounded-lg border border-[#E5E5E7]">
-          <img className="w-full h-full" src="/wp/image5.png" />
-        </div>
-       <h3 className="bebas-neue-regular tracking-[-1px] text-[32px] text-[#1D1D1B] font-bold leading-[35px] uppercase">
-          Tokens and economy
-        </h3>
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+        </WpMainPara>
+        <WpImage Image={"image5.png"}></WpImage>
+
+        <WpSubHeading>Tokens and economy</WpSubHeading>
+        <WpSubPara>
           The tokens serve as vital infrastructure within The Kanoi TCG
           ecosystem and consist of two ERC-20 tokens: the utility token $SAISEN
           and the governance token $KANOI. They are designed to uphold the
@@ -216,79 +207,55 @@ const MainPage = () => {
           equitable value distribution throughout the community of players,
           developers, and creators, preventing the concentration of all
           player-generated value solely with the developers.
-        </p>
-       <h3 className="bebas-neue-regular tracking-[-1px] text-[32px] text-[#1D1D1B] font-bold leading-[35px] uppercase">
-          $Saisen: Utility token
-        </h3>
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+        </WpSubPara>
+
+        <WpSubHeading>$Saisen: Utility token</WpSubHeading>
+        <WpSubPara>
           $SAISEN serves as the primary currency within The Kanoi TCG, used by
           players to purchase and upgrade cards, as well as to participate in
           specific events and tournaments.Tightly integrated with player
           actions, $SAISEN can be earned through active gameplay, playing a
           pivotal role in driving economic activity within the game.
-        </p>
-        <div className="w-[343px] md:w-[800px] h-[192px]   md:h-[446px] rounded-lg border border-[#E5E5E7]">
-          <img className=" rounded-lg w-full h-full" src="/wp/image6.gif" />
-        </div>
-       <h3 className="bebas-neue-regular tracking-[-1px] text-[28px] text-[#1D1D1B] font-bold leading-[35px] uppercase">
-          SUPPLY AND ALLOCATION
-        </h3>
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+        </WpSubPara>
+        <WpImage Image={"image6.gif"}></WpImage>
+       
+
+        <WpSmallHeading>SUPPLY AND ALLOCATION</WpSmallHeading>
+        <WpSubPara>
           The $SAISEN token has a fixed supply of 50,000,000,000, ensuring an
           abundant reserve as the primary currency within the ecosystem. The
           allocation of $SAISEN tokens is as follows:
-        </p>
-        <div className="flex flex-col justify-center gap-[12px]">
-          <div className="flex">
-            <img src="/wp/redstar.png" />
-            <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]">
-              70% to the ecosystem P2E pool
-            </p>
-          </div>
-          <div className="flex">
-            <img src="/wp/redstar.png" />
-            <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]">
-              12% to the ecosystem staking pool
-            </p>
-          </div>
-          <div className="flex">
-            <img src="/wp/redstar.png" />
-            <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]">
-              6% to the ecosystem token reserve
-            </p>
-          </div>
-          <div className="flex">
-            <img src="/wp/redstar.png" />
-            <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]">
-              6% to Initial Exchange Offering (IEO)
-            </p>
-          </div>
-        </div>
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+        </WpSubPara>
+        <WpSmallPara>
+          <WpBullet>70% to the ecosystem P2E pool</WpBullet>
+          <WpBullet>12% to the ecosystem staking pool</WpBullet>
+          <WpBullet>6% to the ecosystem token reserve</WpBullet>
+          <WpBullet>6% to Initial Exchange Offering (IEO)</WpBullet>
+        </WpSmallPara>
+        <WpSmallPara>
           The ecosystem token reserve comprises reserved tokens intended for
           fostering growth within The Kanoi TCG ecosystem, primarily intended
           for use in campaigns and similar activities.
-        </p>
-        <div className="w-[343px] md:w-[800px] h-[192px]   md:h-[446px] rounded-lg border border-[#E5E5E7]">
-          <img className=" rounded-lg w-full h-full" src="/wp/chart1.gif" />
+        </WpSmallPara>
+        {/* <WpImage Image={"chart.gif"}></WpImage> */}
+        <div className="w-[343px] h-[192px] md:w-[800px] md:h-[446px] rounded-lg mt-[20px] md:mt-[32px] overflow-hidden mx-auto border-[1px] border-[#E5E5E7]">
+            <img className="w-full h-full object-cover " src={`/wp/chart.gif`} />
         </div>
-       <h3 className="bebas-neue-regular tracking-[-1px] text-[28px] text-[#1D1D1B] font-bold leading-[35px] uppercase">
-          Staking
-        </h3>
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+        <WpSmallHeading>Staking</WpSmallHeading>
+        <WpSubPara>
           Locking $SAISEN tokens in the $SAISEN staking pool enables users to
           earn additional $SAISEN rewards. The amount of rewards received is
           contingent upon the quantity of tokens locked and the duration of the
           lockup period. Staking incentives may encompass exclusive NFTs,
           in-game items, and other perks.
-        </p>
-        <div className="w-[343px] md:w-[800px] h-[192px]   md:h-[446px] rounded-lg border border-[#E5E5E7]">
-          <img className=" rounded-lg w-full h-full" src="/wp/saisen.gif" />
+        </WpSubPara>
+        {/* <WpImage Image={"saisen.gif"}></WpImage> */}
+        <div className="w-[343px] h-[192px] md:w-[800px] md:h-[446px] rounded-lg mt-[20px] md:mt-[32px] overflow-hidden mx-auto border-[1px] border-[#E5E5E7]">
+            <img className="w-full h-full object-cover " src={`/wp/saisen.gif`} />
         </div>
-       <h3 className="bebas-neue-regular tracking-[-1px] text-[28px] text-[#1D1D1B] font-bold leading-[35px] uppercase">
-          $KANOI : GOVERNANCE TOKEN
-        </h3>
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+
+        <WpSubHeading>$KANOI : GOVERNANCE TOKEN</WpSubHeading>
+        <WpSubPara>
           The $KANOI token is a scarce asset that is difficult to obtain
           in-game. It is essential for unlocking premium benefits and accessing
           exclusive events within The Kanoi TCG ecosystem. Additionally, $KANOI
@@ -299,135 +266,93 @@ const MainPage = () => {
           evolution. The extent of voting rights is determined by the quantity
           of $KANOI held, promoting the ecosystem's robust growth and
           transparency.
-        </p>
-        <div className="w-[343px] md:w-[800px] h-[192px]   md:h-[446px] rounded-lg border border-[#E5E5E7]">
-          <img className=" rounded-lg w-full h-full" src="/wp/kanoi1.gif" />
-        </div>
-       <h3 className="bebas-neue-regular tracking-[-1px] text-[28px] text-[#1D1D1B] font-bold leading-[35px] uppercase">
-          SUPPLY AND ALLOCATION
-        </h3>
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+        </WpSubPara>
+        <WpImage Image={"kanoi1.gif"}></WpImage>
+
+        <WpSmallHeading>SUPPLY AND ALLOCATION</WpSmallHeading>
+        <WpSubPara>
           The $KANOI token has a fixed supply of 100,000,000, deliberately
           limited in issuance to maintain its scarcity relative to $SAISEN. The
           allocation of $KANOI tokens is as follows:
-        </p>
-        <div className="flex flex-col justify-center gap-[12px]">
-          <div className="flex">
-            <img src="/wp/redstar.png" />
-            <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]">
-              34% to the ecosystem P2E pool
-            </p>
-          </div>
-          <div className="flex">
-            <img src="/wp/redstar.png" />
-            <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]">
-              15% to the ecosystem staking pool
-            </p>
-          </div>
-          <div className="flex">
-            <img src="/wp/redstar.png" />
-            <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]">
-              12% to the ecosystem token reserve
-            </p>
-          </div>
-          <div className="flex">
-            <img src="/wp/redstar.png" />
-            <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]">
-              13% to IEO
-            </p>
-          </div>
-          <div className="flex">
-            <img src="/wp/redstar.png" />
-            <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]">
-              13% to gmlabs token reserve
-            </p>
-          </div>
-          <div className="flex">
-            <img src="/wp/redstar.png" />
-            <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]">
-              5% to investors
-            </p>
-          </div>
-          <div className="flex">
-            <img src="/wp/redstar.png" />
-            <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]">
-              8% to partners
-            </p>
-          </div>
-          <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
-            The ecosystem token reserve comprises reserved tokens intended for
-            fostering growth within The Kanoi TCG ecosystem. These tokens may be
-            utilized for marketing initiatives, development boosts, or deposited
-            into a treasury managed according to the governance decisions of
-            $KANOI token holders.
-          </p>
-          <div className="w-[343px] md:w-[800px] h-[192px]   md:h-[446px] rounded-lg border border-[#E5E5E7]">
-            <img className=" rounded-lg w-full h-full" src="/wp/chart2.gif" />
-          </div>
-         <h3 className="bebas-neue-regular tracking-[-1px] text-[28px] text-[#1D1D1B] font-bold leading-[35px] uppercase">
-            VESTING TERM
-          </h3>
-          <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
-            The following owners of $KANOI will be subject to a lock-up under
-            the conditions below, starting from the date of listing on the
-            exchange.
-          </p>
-         <h3 className="bebas-neue-regular tracking-[-1px] text-[28px] text-[#1D1D1B] font-bold leading-[35px] uppercase">
-            Staking
-          </h3>
-          <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
-            Rewards vary based on the amount of tokens locked and the lockup
-            duration. When $KANOI tokens are locked in the $SAISEN staking pool,
-            the reward amount in $SAISEN is calculated by converting $KANOI to
-            the prevailing market value of $SAISEN. Staking incentives may
-            encompass exclusive NFTs and in-game items.
-          </p>
-          <div className="w-[343px] md:w-[800px] h-[192px]   md:h-[446px] rounded-lg border border-[#E5E5E7]">
-            <img className=" rounded-lg w-full h-full" src="/wp/kanoi.gif" />
-          </div>
-         <h3 className="bebas-neue-regular tracking-[-1px] text-[28px] text-[#1D1D1B] font-bold leading-[35px] uppercase">
-            TOKEN USES AND VALUE FLOWS
-          </h3>
-          <div className="w-[343px] md:w-[800px] h-[192px]   md:h-[446px] rounded-lg border border-[#E5E5E7]">
-            <img className=" rounded-lg w-full h-full" src="/wp/kanoiuser.gif" />
-          </div>
-          <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
-            $SAISEN and $KANOI provide players of The Kanoi TCG within the
-            ecosystem with digital assets, services, and functionalities that
-            can only be accessed or exchanged using tokens. Below are some
-            examples of the digital assets, services, and functionalities that
-            can be accessed or exchanged with each token:
-          </p>
-          <div className="w-[343px] md:w-[800px] h-[649px] rounded-lg border border-[#E5E5E7]">
-            <img className=" rounded-lg w-full h-full" src="/wp/table.png" />
-          </div>
-          <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
-            P2E continues to supply players with $SAISEN and $KANOI, so the
-            prices of the above digital assets, services, and functions must be
-            permanently adjusted to offset a potential oversupply. In The Kanoi
-            TCG ecosystem, prices are dynamically adjusted based on information
-            from the Oracle.
-          </p>
-         <h3 className="bebas-neue-regular tracking-[-1px] text-[28px] text-[#1D1D1B] font-bold leading-[35px] uppercase">
-            $ZENI : IN-GAME COIN
-          </h3>
-          <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
-            In The Kanoi TCG, there also exists an off-chain, in-game coin $ZENI
-            that is limited to use within the game. It cannot be used for
-            exchanging with real-world value, nor for purchasing NFTs or tokens.
-            $ZENI facilitates the onboarding of players who are not familiar
-            with Web3 or blockchain, and it is useful for simplifying
-            transactions of items that do not need to be turned into assets.
-          </p>
+        </WpSubPara>
+        <WpSmallPara>
+          <WpBullet>34% to the ecosystem P2E pool</WpBullet>
+          <WpBullet>15% to the ecosystem staking pool</WpBullet>
+          <WpBullet>12% to the ecosystem token reserve</WpBullet>
+          <WpBullet>13% to IEO</WpBullet>
+          <WpBullet>13% to gmlabs token reserve</WpBullet>
+          <WpBullet>5% to investors</WpBullet>
+          <WpBullet>8% to partners</WpBullet>
+        </WpSmallPara>
+        <WpSmallPara>
+          The ecosystem token reserve comprises reserved tokens intended for
+          fostering growth within The Kanoi TCG ecosystem. These tokens may be
+          utilized for marketing initiatives, development boosts, or deposited
+          into a treasury managed according to the governance decisions of
+          $KANOI token holders.
+        </WpSmallPara>
+        {/* <WpImage Image={"chart2.gif"}></WpImage> */}
+        <div className="w-[343px] h-[192px] md:w-[800px] md:h-[446px] rounded-lg mt-[20px] md:mt-[32px] overflow-hidden mx-auto border-[1px] border-[#E5E5E7]">
+            <img className="w-full h-full object-cover " src={`/wp/chart2.gif`} />
         </div>
+
+        <WpSmallHeading>VESTING TERM</WpSmallHeading>
+        <WpSubPara>
+          The following owners of $KANOI will be subject to a lock-up under the
+          conditions below, starting from the date of listing on the exchange.
+        </WpSubPara>
+        {/* table */}
+        <WpVestingTable></WpVestingTable>
+        <WpSmallHeading>Staking</WpSmallHeading>
+        <WpSubPara>
+          Rewards vary based on the amount of tokens locked and the lockup
+          duration. When $KANOI tokens are locked in the $SAISEN staking pool,
+          the reward amount in $SAISEN is calculated by converting $KANOI to the
+          prevailing market value of $SAISEN. Staking incentives may encompass
+          exclusive NFTs and in-game items.
+        </WpSubPara>
+        {/* <WpImage Image={"kanoi.gif"}></WpImage> */}
+        <div className="w-[343px] h-[192px] md:w-[800px] md:h-[446px] rounded-lg mt-[20px] md:mt-[32px] overflow-hidden mx-auto border-[1px] border-[#E5E5E7]">
+            <img className="w-full h-full object-cover " src={`/wp/kanoi.gif`} />
+        </div>
+
+        <WpSubHeading>TOKEN USES AND VALUE FLOWS</WpSubHeading>
+        {/* <WpImage Image={"kanoiuser.gif"}></WpImage> */}
+        <div className="w-[343px] h-[192px] md:w-[800px] md:h-[446px] rounded-lg mt-[20px] md:mt-[32px] overflow-hidden mx-auto border-[1px] border-[#E5E5E7]">
+            <img className="w-full h-full object-cover " src={`/wp/kanoiuser.gif`} />
+        </div>
+        <WpMainPara>
+          $SAISEN and $KANOI provide players of The Kanoi TCG within the
+          ecosystem with digital assets, services, and functionalities that can
+          only be accessed or exchanged using tokens. Below are some examples of
+          the digital assets, services, and functionalities that can be accessed
+          or exchanged with each token:
+        </WpMainPara>
+        {/* Table */}
+        <WpTokenUsesTable/>
+        <WpMainPara>
+          P2E continues to supply players with $SAISEN and $KANOI, so the prices
+          of the above digital assets, services, and functions must be
+          permanently adjusted to offset a potential oversupply. In The Kanoi
+          TCG ecosystem, prices are dynamically adjusted based on information
+          from the Oracle.
+        </WpMainPara>
+
+        <WpSubHeading>$ZENI : IN-GAME COIN</WpSubHeading>
+        <WpSubPara>
+          In The Kanoi TCG, there also exists an off-chain, in-game coin $ZENI
+          that is limited to use within the game. It cannot be used for
+          exchanging with real-world value, nor for purchasing NFTs or tokens.
+          $ZENI facilitates the onboarding of players who are not familiar with
+          Web3 or blockchain, and it is useful for simplifying transactions of
+          items that do not need to be turned into assets.
+        </WpSubPara>
       </div>
 
       {/* **** PLAY TO EARN *********  */}
-      <div className="flex flex-col gap-5">
-       <h3 id="Play to earn" className="bebas-neue-regular tracking-[-1px] text-[36px] md:text-[48px] text-[#1D1D1B] font-bold leading-[35px] uppercase">
-          PLAY TO EARN
-        </h3>
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+      <div id="Play to earn">
+        <WpMainHeading>PLAY TO EARN</WpMainHeading>
+        <WpMainPara>
           Participating in the game is a primary way for players to contribute
           to the ecosystem. The preferential treatment given to winners
           stimulates competitive spirit and serves as an incentive for
@@ -435,123 +360,80 @@ const MainPage = () => {
           encouraging players to engage more enthusiastically in the ecosystem.
           The majority of the supply of $SAISEN and $KANOI is distributed to
           players through the P2E (Play-to-Earn) mechanism.
-        </p>
-
-        {/* **** SAISEN *********  */}
-       <h3 className="bebas-neue-regular tracking-[-1px] text-[32px] text-[#1D1D1B] font-bold leading-[35px] uppercase">
-          $SAISEN
-        </h3>
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+        </WpMainPara>
+        <WpSubHeading>$SAISEN</WpSubHeading>
+        <WpSubPara>
           Players can earn $SAISEN by winning matches in The Kanoi TCG. $SAISEN
           is issued to players based on several factors, including the outcome
           of the game and the percentage of NFT cards in their deck. The
           issuance of $SAISEN in The Kanoi TCG varies in non-tournament matches
           (likely the most frequently played type of match) based on the
           following factors:
-        </p>
-
-        {/* ******** points *******/}
-        <div className="flex flex-col justify-center gap-[12px]">
-          <div className="flex items-start">
-            <img src="/wp/redstar.png" />
-            <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]">
-              Outcome: $SAISEN is issued only if the player wins the match.
-            </p>
-          </div>
-          <div className="flex items-start ">
-            <img src="/wp/redstar.png" />
-            <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]">
-              Rank: The higher the rank, the more difficult it is to win, and
-              the greater the amount of $SAISEN issued.
-            </p>
-          </div>
-          <div className="flex items-start ">
-            <img src="/wp/redstar.png" />
-            <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]">
-              Deck Composition: Players receive bonus $SAISEN based on the
-              number of NFT cards in their deck.
-            </p>
-          </div>
-        </div>
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+        </WpSubPara>
+        <WpSmallPara>
+          <WpBullet>
+            Outcome: $SAISEN is issued only if the player wins the match.
+          </WpBullet>
+          <WpBullet>
+            Rank: The higher the rank, the more difficult it is to win, and the
+            greater the amount of $SAISEN issued.
+          </WpBullet>
+          <WpBullet>
+            Deck Composition: Players receive bonus $SAISEN based on the number
+            of NFT cards in their deck.
+          </WpBullet>
+        </WpSmallPara>
+        <WpSmallPara>
           In addition, $SAISEN can also be earned through rewards based on rank
           or the final results of tournaments, rewards for defeating jackpot
           battles, and staking rewards for $SAISEN and $KANOI.
-        </p>
-
-        {/* **** $KANOI *********  */}
-       <h3 className="bebas-neue-regular tracking-[-1px] text-[32px] text-[#1D1D1B] font-bold leading-[35px] uppercase">
-          $KANOI
-        </h3>
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+        </WpSmallPara>
+        <WpSubHeading>$KANOI</WpSubHeading>
+        <WpSubPara>
           The highly scarce $KANOI can only be obtained by achieving outstanding
           results in The Kanoi TCG gameplay. Below are examples of gameplay
           through which $KANOI can be earned:
-        </p>
+        </WpSubPara>
+        <WpSmallPara>
+          <WpBullet>
+            Rank: Being in the top ranks at the end of the season
+          </WpBullet>
+          <WpBullet>Tournament: Ranking high in tournaments</WpBullet>
+          <WpBullet>
+            Tower Battle: Defeating the boss in the upper levels of the tower
+            battle
+          </WpBullet>
+        </WpSmallPara>
 
-        {/* ******** points *******/}
-        <div className="flex flex-col justify-center gap-[12px]">
-          <div className="flex items-center">
-            <img src="/wp/redstar.png" />
-            <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]">
-              Rank: Being in the top ranks at the end of the season
-            </p>
-          </div>
-          <div className="flex items-center ">
-            <img src="/wp/redstar.png" />
-            <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]">
-              Tournament: Ranking high in tournaments
-            </p>
-          </div>
-          <div className="flex items-center ">
-            <img src="/wp/redstar.png" />
-            <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]">
-              Tower Battle: Defeating the boss in the upper levels of the tower
-              battle
-            </p>
-          </div>
-        </div>
-
-        {/* **** Gameplay *********  */}
-       <h3 className="bebas-neue-regular tracking-[-1px] text-[32px] text-[#1D1D1B] font-bold leading-[35px] uppercase">
-          Gameplay
-        </h3>
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+        <WpSubHeading>Gameplay</WpSubHeading>
+        <WpSubPara>
           $SAISEN can be earned by playing and winning matches in The Kanoi TCG.
           Each match is typically a one-on-one turn-based battle, where the
           player whose life points reach zero first loses. A deck consists of
           one avatar card, three spell cards that vary depending on the avatar
           card, and twenty monster cards, making a total of twenty-four cards.
           Numerous TCGs (Trading Card Games) that have gained global popularity
-          were born in Japan.The Kanoi TCG specializes in the professional
+          were born in Japan. The Kanoi TCG specializes in the professional
           analysis of popular Japanese TCGs and features quick and strategy-rich
           gameplay filled with originality, incorporating exciting essences
           while being distinct from others.
-        </p>
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+        </WpSubPara>
+        <WpMainPara>
           Here, we provide information on some of the game modes planned for
           implementation. Further details about the gameplay will be announced
           during the public testing phase.
-        </p>
-
-        {/* **** CASUAL (PvP) *********  */}
-       <h3 className="bebas-neue-regular tracking-[-1px] text-[32px] text-[#1D1D1B] font-bold leading-[35px] uppercase">
-          CASUAL (PvP)
-        </h3>
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+        </WpMainPara>
+        <WpSubHeading>CASUAL (PvP)</WpSubHeading>
+        <WpSubPara>
           The casual mode is the most common game mode. You can compete against
           other players, and if you win, you can earn $SAISEN based on the
           results of the match. Additionally, you can earn Rank Points [RP]
           according to the results of the match, and your rank will change based
           on the RP you have earned. Rewards and badges are provided according
           to the rank you are in at the end of the season.
-        </p>
-
-        {/* **** JACKPOT (PvE) *********  */}
-       <h3 className="bebas-neue-regular tracking-[-1px] text-[32px] text-[#1D1D1B] font-bold leading-[35px] uppercase">
-          JACKPOT (PvE)
-        </h3>
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+        </WpSubPara>
+        <WpSubHeading>JACKPOT (PvE)</WpSubHeading>
+        <WpSubPara>
           The jackpot is an exciting game mode where there's a chance to win a
           large amount of $SAISEN. Before playing the jackpot, players deposit a
           certain amount of $SAISEN. Then, players face off against CPUs of
@@ -559,88 +441,76 @@ const MainPage = () => {
           winning all the $SAISEN deposited by other players if they win. Since
           the strength of the CPUs is random, even players who have just started
           playing The Kanoi TCG have a chance of winning.
-        </p>
-
-        {/* **** TOuRNAMENT (PvP) *********  */}
-       <h3 className="bebas-neue-regular tracking-[-1px] text-[32px] text-[#1D1D1B] font-bold leading-[35px] uppercase">
-          TOuRNAMENT (PvP)
-        </h3>
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+        </WpSubPara>
+        <WpSubHeading>TOuRNAMENT (PvP)</WpSubHeading>
+        <WpSubPara>
           Participants can join the tournament by obtaining a tournament pass,
           and they compete for rewards, badges, and honor set for each
           tournament. Players who win their matches will continue to compete
           against each other to determine the champion.
-        </p>
-
-        {/* **** TOWER (PvE) *********  */}
-       <h3 className="bebas-neue-regular tracking-[-1px] text-[32px] text-[#1D1D1B] font-bold leading-[35px] uppercase">
-          TOWER (PvE)
-        </h3>
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+        </WpSubPara>
+        <WpSubHeading>TOWER (PvE)</WpSubHeading>
+        <WpSubPara>
           The Tower Battle is a high-difficulty game mode that can be attempted
           by obtaining a Tower Pass. Players face off against boss CPUs on each
           floor, and by defeating them, they can ascend to the next level,
           earning rewards with each boss defeated. The rewards become more
           luxurious as the players defeat bosses on higher floors.
-        </p>
+        </WpSubPara>
       </div>
 
       {/* **** BEYOND THE TCG *********  */}
-      <div className="flex flex-col gap-5">
-       <h3 id="Beyond the TCG" className="bebas-neue-regular tracking-[-1px] text-[36px] md:text-[48px] text-[#1D1D1B] font-bold leading-[35px] uppercase">
-          BEYOND THE TCG
-        </h3>
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+      <div id="Beyond the TCG">
+        <WpMainHeading>BEYOND THE TCG</WpMainHeading>
+        <WpMainPara>
           In The Kanoi TCG, a grand narrative serves as the backdrop for the
           appearance of characters with rich personalities. Leading with
           trailers that are made public, we plan to further deepen and expand
           the world through the development of various contents such as anime,
           manga, and merchandise.
-        </p>
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+        </WpMainPara>
+        <WpMainPara>
           In an era where content overflows on the internet and social media,
           leading to reduced consumption time for each piece of content, games
           emerge as a powerful tool that realizes long-term engagement with
           content, forming an essential foundation of attachment to IPs. The
           fact that many globally popular IPs in Japan have their roots in games
           demonstrates that games are an excellent means for building IP brands.
-        </p>
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+        </WpMainPara>
+        <WpMainPara>
           The Kanoi TCG aims to build a world-renowned IP brand by deepening and
           expanding the world through the development of various contents,
           rooted in a TCG that combines the game with the exciting experience of
           blockchain technology.
-        </p>
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+        </WpMainPara>
+        <WpMainPara>
           The most important factor in IP construction is fostering attachment
           to the IP, and the most effective way to achieve this is by increasing
           touchpoints with the IP in everyday life. Psychologically, people tend
           to develop attachment to subjects they have more interactions with.
           For digital-born IPs, increasing physical touchpoints becomes a
           strategic necessity for mid-to-long term development.
-        </p>
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+        </WpMainPara>
+        <WpMainPara>
           The Kanoi TCG will actively pursue physical merchandise development.
           Additionally, leveraging the strong network with the entertainment
           industry held by its developer, gmlabs, it will engage in
           collaborations with various IPs, including Web2, to create
           multidimensional touchpoints with the IP.
-        </p>
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+        </WpMainPara>
+        <WpMainPara>
           By merging digital and physical elements and utilizing technology in
           innovative game design and IP construction, The Kanoi TCG promises to
           offer new values and enjoyment beyond a mere TCG, providing
           unprecedented excitement and emotional highs in every moment
           experienced both inside and outside the game.
-        </p>
+        </WpMainPara>
       </div>
 
       {/* **** LEGAL NOTICE AND RISK DISCLOSURE  *********  */}
-      <div className="flex flex-col gap-5">
-       <h3 id="Legal notice" className="bebas-neue-regular tracking-[-1px] text-[36px] md:text-[48px] text-[#1D1D1B] font-bold leading-[35px] uppercase">
-          LEGAL NOTICE AND RISK DISCLOSURE
-        </h3>
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+      <div id="Legal notice">
+        <WpMainHeading>LEGAL NOTICE AND RISK DISCLOSURE</WpMainHeading>
+        <WpMainPara>
           This Legal Notice and Risk Disclosure Notice is provided by Isekai and
           gmlabs (collectively with its affiliates, referred to as "we", "our",
           or "us"). gmlabs is an independent service provider offering
@@ -649,26 +519,26 @@ const MainPage = () => {
           platforms, products, and services provided are subject to this Notice.
           Please read this Notice carefully before using The Kanoi TCG or any
           tokens.
-        </p>
-
-        {/*******  Legal Notice ***********/}
-       <h3 className="bebas-neue-regular tracking-[-1px] text-[32px] text-[#1D1D1B] font-bold leading-[35px] uppercase">
-          LEGAL NOTICE
-        </h3>
-
-        {/*******  INFORMATION AND COMMUNICATIONS ***********/}
-       <h3 className="bebas-neue-regular tracking-[-1px] text-[32px] text-[#1D1D1B] font-bold leading-[35px] uppercase">
-          INFORMATION AND COMMUNICATIONS
-        </h3>
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+        </WpMainPara>
+        <WpSubHeading>LEGAL NOTICE</WpSubHeading>
+        <WpSmallHeading>INFORMATION AND COMMUNICATIONS</WpSmallHeading>
+        <WpSubPara>
           All information communicated through our website [Website] (accessible
-          via https://www.kanoi.io/ or any successor or alternative URLs), by
-          us, or on our behalf through whitepapers, communication channels, or
-          other media [Materials], is not intended to offer or solicit the
-          purchase, sale, holding of tokens, or any other assets, nor the use of
-          any related products or services.
-        </p>
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+          via{" "}
+          <a
+            href="https://kanoi.io/"
+            target="_blank"
+            className="underline text-[#F20057]"
+          >
+            https://kanoi.io/
+          </a>{" "}
+          or any successor or alternative URLs), by us, or on our behalf through
+          whitepapers, communication channels, or other media [Materials], is
+          not intended to offer or solicit the purchase, sale, holding of
+          tokens, or any other assets, nor the use of any related products or
+          services.
+        </WpSubPara>
+        <WpMainPara>
           All Materials are provided solely for informational and educational
           purposes and should not be relied upon, in whole or in part, for
           making any decisions. The Materials do not guarantee accuracy or
@@ -679,28 +549,23 @@ const MainPage = () => {
           risk, and you alone are responsible for any damage or loss that may
           result from their use. You should always conduct your own independent
           research and analysis of any information.
-        </p>
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+        </WpMainPara>
+        <WpMainPara>
           The Materials may include references to third-party data and
           publications. While we believe this data to be accurate and
           reasonable, we do not warrant the accuracy or reliability of such
           data. References to third-party data and publications do not imply
           endorsement.
-        </p>
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+        </WpMainPara>
+        <WpMainPara>
           The Materials may also contain references to third-party data and
           publications. While we believe that such data is accurate and
           reasonable, we do not guarantee the accuracy or reliability of that
           data. References to third-party data and publications do not imply
           endorsement or support of them.
-        </p>
-
-        {/******* the tokens ***********/}
-       <h3 className="bebas-neue-regular tracking-[-1px] text-[32px] text-[#1D1D1B] font-bold leading-[35px] uppercase">
-          the tokens
-        </h3>
-
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+        </WpMainPara>
+        <WpSmallHeading>the tokens</WpSmallHeading>
+        <WpSubPara>
           We make no warranties or representations whatsoever with respect to
           the tokens, and we expressly disclaim all warranties and
           representations in connection with the tokens. There is no guarantee
@@ -708,57 +573,53 @@ const MainPage = () => {
           particular value or price. The tokens may lose some or all of their
           value. We make no promises regarding the value, price, supply, or
           performance of the tokens.
-        </p>
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+        </WpSubPara>
+        <WpMainPara>
           The tokens are not investments, securities, stocks, debt, loans, or
           any derivative financial products thereof. All information provided in
           the Materials or communicated by us does not in any way constitute an
           offer or solicitation to buy or sell the tokens or any other assets.
-        </p>
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+        </WpMainPara>
+        <WpMainPara>
           Unless expressly allowed by us at our discretion, Tokens cannot be
           received, used, or held by, transferred or sold to, a person which is 
-        </p>
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+        </WpMainPara>
+        <WpMainPara>
           (I) the subject of economic or financial sanctions or trade embargoes
           administered or enforced by any country or government, including, but
           not limited to, those administered by the United Nations Security
           Council, the European Union, Her Majesty’s Treasury of the United
           Kingdom or Office of Foreign Assets Control of the United States or
           any other applicable jurisdictions, 
-        </p>
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+        </WpMainPara>
+        <WpMainPara>
           (II) located, organised or resident in any country or territory that
           is the subject of country-wide or territory-wide sanctions, 
-        </p>
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+        </WpMainPara>
+        <WpMainPara>
           (III) listed in any sanctions-related list of sanctioned persons,
           including, but not limited to, those maintained by the United Nations
           Security Council, the European Union, Her Majesty’s Treasury of the
           United Kingdom or Office of Foreign Assets Control of the United
-          States, 
-        </p>
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+          States,
+        </WpMainPara>
+        <WpMainPara>
           (IV) located, organised or resident in Australia, Canada, Cuba, the
           Democratic People’s Republic of North Korea, Hong Kong SAR, the
           Islamic Republic of Iran, Libya, the People's
-        </p>
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+        </WpMainPara>
+        <WpMainPara>
           Republic of China, South Sudan, Sudan (North), Syria, The Crimea,
           United States of America, any jurisdiction in which the acquisition
           and/or ownership of Tokens is prohibited by applicable law, or 
-        </p>
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+        </WpMainPara>
+        <WpMainPara>
           (V) directly or indirectly owned or controlled by any person or
           persons described above.
-        </p>
+        </WpMainPara>
 
-        {/*******FORWARD-LOOKING STATEMENTS***********/}
-       <h3 className="bebas-neue-regular tracking-[-1px] text-[32px] text-[#1D1D1B] font-bold leading-[35px] uppercase">
-          FORWARD-LOOKING STATEMENTS
-        </h3>
-
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+        <WpSmallHeading>FORWARD-LOOKING STATEMENTS</WpSmallHeading>
+        <WpSubPara>
           The Website, and the Materials may contain forward-looking statements
           based on current expectations that involve a number of risks and
           uncertainties. All opinions, forecasts, projections, future plans or
@@ -767,8 +628,8 @@ const MainPage = () => {
           business projections, future functionality and projected performance
           of the Tokens, the Project or us, as well as prospects and the future
           prospects of any industry, are forward-looking statements.
-        </p>
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+        </WpSubPara>
+        <WpMainPara>
           Forward-looking statements by their nature address matters that are,
           to different degrees, uncertain or unknown. We can give no assurance
           that any forward-looking statements will prove to have been correct.
@@ -783,29 +644,23 @@ const MainPage = () => {
           introduction of new regulations and laws, market changes, the
           performance of the Tokens, the Project or related products, other
           business and market conditions.
-        </p>
-
-        {/*******INDEMNITY AND LIMITATION OF LIABILITY***********/}
-       <h3 className="bebas-neue-regular tracking-[-1px] text-[32px] text-[#1D1D1B] font-bold leading-[35px] uppercase">
-          INDEMNITY AND LIMITATION OF LIABILITY
-        </h3>
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+        </WpMainPara>
+        <WpSmallHeading>INDEMNITY AND LIMITATION OF LIABILITY</WpSmallHeading>
+        <WpSubPara>
           You do hereby to the fullest extent permitted by applicable laws and
           regulations indemnify, defend and hold us, our employees, directors,
           shareholders, officers, consultants, representatives, agents or
           contractors harmless from and against any and all loss, penalty,
           claim, damage, liability or expense whatsoever (including reasonable
           attorneys’ fees and disbursements) due to or arising out of or based
-          upon
-        </p>
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+          upon{" "}
+        </WpSubPara>
+        <WpMainPara>
           (I) any inaccurate representation or warranty made by you, or breach
           or failure by you to comply with any covenant or agreement made by you
           or in any other document furnished by you to any of the foregoing
-          persons in connection with the Tokens or the Project, or
-        </p>
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
-          (II) any action instituted by or on your behalf against any of the
+          persons in connection with the Tokens or the Project, or <br /> (II)
+          any action instituted by or on your behalf against any of the
           foregoing persons that is finally resolved by judgment against you or
           in favor of any of the foregoing persons. To the maximum extent
           permitted by applicable laws and regulations, in no event shall us,
@@ -821,16 +676,11 @@ const MainPage = () => {
           negligence, strict liability, tort, or any other legal theory,
           regardless of whether we have been advised of the possibility of such
           damages or losses
-        </p>
+        </WpMainPara>
 
-        {/*******RISK DISCLOSURE***********/}
-       <h3 className="bebas-neue-regular tracking-[-1px] text-[32px] text-[#1D1D1B] font-bold leading-[35px] uppercase">
-          RISK DISCLOSURE
-        </h3>
-       <h3 className="bebas-neue-regular tracking-[-1px] text-[28px] text-[#1D1D1B] font-bold leading-[35px] uppercase">
-          RISK OF SOFTWARE WEAKNESS
-        </h3>
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+        <WpSubHeading>RISK DISCLOSURE</WpSubHeading>
+        <WpSmallHeading>RISK OF SOFTWARE WEAKNESS</WpSmallHeading>
+        <WpSubPara>
           Reasonable efforts will be made to ensure a high level of security for
           the software and tokens related to The Kanoi TCG, but there is no
           guarantee that the tokens or related software are secure, or that they
@@ -839,13 +689,9 @@ const MainPage = () => {
           bugs, vulnerabilities, viruses, or other defects, which could have a
           significant adverse effect on the operation of the tokens or related
           software and may cause harm to you or third parties.
-        </p>
-
-        {/* RISK INHERENT IN THE BLOCKCHAIN */}
-       <h3 className="bebas-neue-regular tracking-[-1px] text-[28px] text-[#1D1D1B] font-bold leading-[35px] uppercase">
-          RISK INHERENT IN THE BLOCKCHAIN
-        </h3>
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+        </WpSubPara>
+        <WpSmallHeading>RISK INHERENT IN THE BLOCKCHAIN</WpSmallHeading>
+        <WpSubPara>
           Software and tokens related to The Kanoi TCG are deployed on the
           Ethereum blockchain's mainnet or may be deployed on other blockchains
           in the future. Therefore, failures, malfunctions, or abandonment of
@@ -857,13 +703,23 @@ const MainPage = () => {
           tokens related to The Kanoi TCG. Although the possibility is extremely
           low, blockchains are susceptible to attacks, which could lead to the
           complete loss of digital assets.
-        </p>
-
-        {/* RISK OF LEGAL UNCERTAINTY */}
-       <h3 className="bebas-neue-regular tracking-[-1px] text-[28px] text-[#1D1D1B] font-bold leading-[35px] uppercase">
-          RISK INHERENT IN THE BLOCKCHAIN
-        </h3>
-        <p className="font-[600]  text-[16px] md:text-[24px] text-[#1D1D1B] leading-[30px] tracking-[-0.02em]   ">
+        </WpSubPara>
+        <WpSmallHeading>RISK OF SOFTWARE WEAKNESS</WpSmallHeading>
+        <WpSubPara>
+          Software and tokens related to The Kanoi TCG are deployed on the
+          Ethereum blockchain's mainnet or may be deployed on other blockchains
+          in the future. Therefore, failures, malfunctions, or abandonment of
+          such blockchains could have a significant adverse effect on the
+          software and tokens related to The Kanoi TCG. Additionally, the
+          evolution of cryptographic technologies or technological advancements
+          like quantum computing could invalidate the cryptographic consensus
+          mechanisms underlying blockchains, posing risks to the software and
+          tokens related to The Kanoi TCG. Although the possibility is extremely
+          low, blockchains are susceptible to attacks, which could lead to the
+          complete loss of digital assets.
+        </WpSubPara>
+        <WpSmallHeading>RISK INHERENT IN THE BLOCKCHAIN</WpSmallHeading>
+        <WpSubPara>
           In the countries where we provide our services, different laws and
           regulations apply. Therefore, we may be obligated to obtain various
           licenses or other authorization documents in some or all of the
@@ -875,7 +731,7 @@ const MainPage = () => {
           existing laws. The compliance costs and capital expenditures that
           these issues may cause could impact our ability to continue providing
           services.
-        </p>
+        </WpSubPara>
       </div>
     </div>
   );

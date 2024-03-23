@@ -10,7 +10,7 @@ const { isDropDownActive, handleIsDropDownActive }=useContext(DropDownMenuContex
 
   return (
    <>
-  { !isDropDownActive&&  <div className=" h-[36px] w-[36px] md:h-[42px] md:w-[42px] cursor-pointer" onClick={()=>{handleIsExploreMode(false); handleIsWhitePaperMode(false)}} >
+  { !isDropDownActive&&  <div className=" h-[36px] w-[36px] md:h-[42px] md:w-[42px] cursor-pointer slide-fade-in-top-2" onClick={()=>{handleIsExploreMode(false); handleIsWhitePaperMode(false)}} >
            { !isExploreMode&& <img className="h-full w-full object-cover"
                   src="/Header/logo_black.png"
                 />}
@@ -20,7 +20,7 @@ const { isDropDownActive, handleIsDropDownActive }=useContext(DropDownMenuContex
     </div>}
     {
       isDropDownActive&&  <button 
-      className={` ${isExploreMode?"bg-white text-black !important":"bg-black text-white"} rounded-lg  flex items-center justify-center w-[146px] h-[42px]  gap-[4px]  text-[16px] font-[400] tracking-[-1px] leading-[14px] `}   >
+      className={` ${isExploreMode?"bg-white text-black !important":"bg-black text-white"} rounded-lg  flex items-center justify-center w-[146px] h-[42px]  gap-[4px]  text-[16px] font-[400] tracking-[-1px] leading-[14px] slide-fade-in-top-2`}   >
         {!isExploreMode&&<img  className="w-[12px] h-[12px]" src="/Header/twitter_white.png"      />    }
         {isExploreMode&&<img  className="w-[12px] h-[12px]" src="/Header/twitter_black.png"      />    }
          Follow for updates

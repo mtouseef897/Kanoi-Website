@@ -18,7 +18,7 @@ const TopPage = () => {
   !isExploreMode && !isWhitePaperMode && <OpacityWrapper><Homepage/></OpacityWrapper>
 }
 {
-  isExploreMode && !isWhitePaperMode && <StoryPage/>
+  isExploreMode && !isWhitePaperMode && <OpacityWrapper><StoryPage/></OpacityWrapper>
 }
 {
   isWhitePaperMode && !isExploreMode && <OpacityWrapper> <WhitePaper/></OpacityWrapper>

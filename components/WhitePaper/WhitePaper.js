@@ -15,12 +15,11 @@ const WhitePaper=()=> {
       <Header/>
       <MobileContentOverview/>
       <HeroSection />
-     
-      <div className="relative flex w-[97%] mx-auto mt-[40px] item-center justify-center xl:justify-between lg:gap-4">
+      <div className="relative flex w-[91.4%] md:w-[95.8%] mx-auto mt-[24px] md:mt-[40px]  md:gap-[48px] justify-center">
         <ContentOverview/>
         <MainPage />
         <IndexSidebar />
-     
+
       </div>
       </WhitePaperIndexContextProvider>
     </>

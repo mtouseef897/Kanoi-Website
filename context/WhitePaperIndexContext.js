@@ -3,7 +3,7 @@ import { useContext,createContext,useState } from "react";
 export const WhitePaperIndexContext=createContext();
 
 export const WhitePaperIndexContextProvider = ({ children }) => {
-    const [currentWhitePaperIndex, setCurrentWhitePaperIndex] = useState("");
+    const [currentWhitePaperIndex, setCurrentWhitePaperIndex] = useState("Kanoi trading");
   
     const handlecurrentWhitePaperIndex = newValue => {
         setCurrentWhitePaperIndex(newValue);

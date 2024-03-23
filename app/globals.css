@@ -341,9 +341,38 @@ user-select: none;
     opacity: 1;
   }
 }
+@keyframes pressin {
+  from {
+    transform: scale(1.1);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes pressoff {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 
 .fade-in {
   animation: fadeIn 1s ease-in;
+}
+.fade-in-3 {
+  animation: fadeIn 0.2s ease-in-out;
+}
+.fade-in-active {
+  animation: pressin 0.6s ease-in-out;
+}
+.fade-in-inactive {
+  animation: pressoff 0.6s ease-in-out;
 }
 
 @keyframes slideInRight {
@@ -390,9 +419,74 @@ user-select: none;
     transform: translateY(0);
   }
 }
+@keyframes slideFadeInTop2 {
+  0% {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slidedown {
+  0% {
+    opacity: 0;
+    height: 0;
+    margin-top: -10%;
+  }
+  100% {
+    opacity: 1;
+    height: 100%;
+    margin-top: 0%;
+  }
+}
+@keyframes rotate-f {
+  0% {
+    opacity: 0;
+    transform: rotate(0) scale(0.99);
+
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(45deg) scale(1);
+  }
+}
+@keyframes rotate-b {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) scale(1.01);
+
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+}
 
 .slide-fade-in-top {
   animation: slideFadeInTop 0.5s ease forwards;
   opacity: 0;
   transform: translateY(-50px);
 }
+
+.slide-fade-in-top-2 {
+  animation: slideFadeInTop2 0.5s ease forwards;
+  opacity: 0;
+  transform: translateY(-5px);
+}
+.slide-down {
+  margin-top: 0%;
+  animation: slidedown 0.3s ease-in-out;
+
+}
+
+.rotate-back {
+  transform: rotate(0deg) scale(1);
+  animation: rotate-b 0.3s ease-in-out;
+}
+.rotate-front {
+  transform: rotate(45deg) scale(1);
+  animation: rotate-f 0.3s ease-in-out;
+}
+

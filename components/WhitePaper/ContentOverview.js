@@ -4,19 +4,20 @@ import React, { useContext, useState } from "react";
 const ContentOverview = () => {
 
   const [isActive,setIsActive]=useState(true);
-  const [activeSection, setActiveSection] = useState(null);
+  const [activeSection, setActiveSection] = useState("Kanoi trading");
   const {handlecurrentWhitePaperIndex}=useContext(WhitePaperIndexContext);
 
   const handleSectionClick = (sectionId) => {
     const section = document.getElementById(sectionId);
-    section.scrollIntoView({ behavior: "smooth" });
+    section.scrollIntoView({ behavior: "smooth", block: 'start', inline: 'nearest' });
+    // window.scrollBy(0, 10); // Apply the offset
     setActiveSection(sectionId);
     handlecurrentWhitePaperIndex(sectionId);
   };
   
   return (
     <>
-    <div className="hidden xl:block max-w-[474px] h-fit p-3 bg-[#FAFAFA] rounded-lg border border-[#E5E5E7] font-[700] cursor-pointer sticky top-[120px]">
+    <div className="hidden xl:block max-w-[474px] h-fit p-3 bg-[#FAFAFA] rounded-lg border border-[#E5E5E7] font-[700] cursor-pointer sticky top-[140px] grow">
       <div className={`${activeSection === "Kanoi trading"?"bg-white border-[#E2E2E2] border":"border-transparent"} flex gap-2 items-center py-3 px-[15px] active:bg-white active:border  border  active:border-[#E2E2E2] rounded-md`}>
         <p className=" text-[24px] leading-6 "> 壱 </p>
         <p onClick={()=>handleSectionClick('Kanoi trading')} className="text-[24px] tracking-[-1px] leading-[30px] ">
