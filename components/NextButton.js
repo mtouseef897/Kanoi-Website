@@ -32,36 +32,39 @@ const [prevYoffset,setPrevYoffset]=useState(yValues[storyPageCount]);
   console.log("X value :",xoffset," Y value : ",yoffset);
 
   return (
-    <motion.div 
+
+
+          <motion.div 
    
-    initial={{ x: `${prevXoffset}vw`, y: `${prevYoffset}vh` }}
-    animate={{ x: `${xoffset}vw`, y: `${yoffset}vh` }}
-    transition={{
-      type: "spring",
-      stiffness: 75,
-      // duration:0.3
-    }}
-    
-    
-    style={{
-      // position: "absolute",
-      // left: `${xoffset}%`,
-      // top: `${yoffset}%`,
-  }} 
-  className={`relative hidden md:flex items-center justify-center w-[68px] h-[68px] rounded-full z-[100] ${bebas_neue.className} 
+   initial={{ x: `${prevXoffset}vw`, y: `${prevYoffset}vh` }}
+   animate={{ x: `${xoffset}vw`, y: `${yoffset}vh` }}
+   transition={{
+     type: "spring",
+     stiffness: 75,
+     // duration:0.3
+   }}
+   
+   
+   style={{   
+     // position: "absolute",
+     // left: `${xoffset}%`,
+     // top: `${yoffset}%`,
+ }} 
+ className={`relative hidden md:flex items-center justify-center w-[68px] h-[68px] rounded-full z-[100] ${bebas_neue.className} 
 
-  `} >
-   {/* transition-all ease-linear duration-500 */}
-        {/* Wrapper */}
-        <div className={` absolute border-2 rounded-full  ${isActive ? 'border-solid' : 'border-dashed'} 
-        ${isActive ? 'w-[52px] h-[52px]' : "w-[68px] h-[68px] spinner"}`}></div>
+ `} >
+  {/* transition-all ease-linear duration-500 */}
+       {/* Wrapper */}
+       <div className={` absolute border-2 rounded-full  ${isActive ? 'border-solid' : 'border-dashed'} 
+       ${isActive ? 'w-[52px] h-[52px]' : "w-[68px] h-[68px] spinner"}`}></div>
 
-        {/* Button */}
-        <button  className={`z-[100] text-[16px]  leading-[48px]
-              bg-white text-black rounded-full w-[44px] h-[44px] cursor-pointer ${isActive?'':''}`}
-                onMouseDown={()=>setIsActive(true) } onMouseUp={()=>setIsActive(false)} onClick={()=>{handleStoryPageCount();handlePosition();}}>     {storyPageCount===15?'FINISH':'NEXT' }  </button>
+       {/* Button */}
+       <button  className={`z-[100] text-[16px]  leading-[48px]
+             bg-white text-black rounded-full w-[44px] h-[44px] cursor-pointer ${isActive?'':''}`}
+               onMouseDown={()=>setIsActive(true) } onMouseUp={()=>setIsActive(false)} onClick={()=>{handleStoryPageCount();handlePosition();}}>     {storyPageCount===15?'FINISH':'NEXT' }  </button>
 
-    </motion.div>
+   </motion.div>
+
   )
 }
 

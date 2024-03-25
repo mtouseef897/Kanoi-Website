@@ -104,7 +104,9 @@ const StoryPage = () => {
         {storyPageCount === 13 && (
           <div>
             <img
-              className="absolute top-0 left-0 w-full h-full object-cover -z-9 fade-in"
+              // className="absolute top-0 left-0 w-full h-full object-cover -z-9 fade-in"
+            className={`absolute top-0 left-0 h-full w-full object-cover -z-9 ${!isMobile?"fade-in":""}`}
+              
               src="/illustrations/sp14.gif"
             />
           </div>
@@ -130,7 +132,9 @@ const StoryPage = () => {
             loop
             muted
             playsInline
-            className="absolute top-0 left-0 h-full w-full object-cover -z-10 fade-in"
+            // className="absolute top-0 left-0 h-full w-full object-cover -z-10 fade-in"
+            className={`absolute top-0 left-0 h-full w-full object-cover -z-10 ${!isMobile?"fade-in":""}`}
+
           ></video>
         )}
         {
@@ -143,7 +147,7 @@ const StoryPage = () => {
             loop
             muted
             playsInline
-            className="absolute top-0 left-0 h-full w-full object-cover -z-10 fade-in"
+            className={`absolute top-0 left-0 h-full w-full object-cover -z-10  ${!isMobile?"fade-in":""}`}
           ></video>
         )}
 
