@@ -55,7 +55,7 @@ const StoryPage = () => {
   };
 
   useEffect(() => {
-    if (storyPageCount===13 || storyPageCount === 12 ) {
+    if (storyPageCount === 13 || storyPageCount === 12) {
       setPlayGif2(true);
     }
   }, [storyPageCount]);
@@ -63,165 +63,145 @@ const StoryPage = () => {
   return (
     <>
       <div
-        // className={`absolute top-0 left-0 h-full w-full 
-        // md:img-hover-zoom md:${storyPageCount > 0 && classNamesArray[storyPageCount - 1]} 
-        // mobile-story-mode ${storyPageCount > 0 && classNamesMobile[storyPageCount - 1]} 
-        //  overflow-hidden    `}
+
         className={`absolute top-0 left-0 h-full w-full 
-        ${!isMobile ? 'img-hover-zoom' : ''}
-        ${storyPageCount > 0 && !isMobile ? classNamesArray[storyPageCount - 1] : ''} 
-        ${isMobile ? 'mobile-story-mode' : ''}
-        ${storyPageCount > 0 && isMobile ? classNamesMobile[storyPageCount - 1] : ''}
+        ${!isMobile ? "img-hover-zoom" : ""}
+        ${
+          storyPageCount > 0 && !isMobile
+            ? classNamesArray[storyPageCount - 1]
+            : ""
+        } 
+        ${isMobile ? "mobile-story-mode" : ""}
+        ${
+          storyPageCount > 0 && isMobile
+            ? classNamesMobile[storyPageCount - 1]
+            : ""
+        }
         overflow-hidden`}
       >
-        {/* { 
-        <AnimatePresence>
-          storyPageCount === 0 && <motion.video
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ x: '-100vw',opacity:0, transition: { duration: 0.5, ease: 'easeOut' } }}
-          transition={{ duration: 0.5, delay: 0.1, ease: 'easeIn' }}
-          key='videobg1'
-         src= "/storypage/bgstorypage1.mp4"
-         autoPlay
-         loop
-         muted
-         playsInline
-         className="absolute top-0 left-0 h-full w-full object-cover -z-10  "
-       ></motion.video>
-       </AnimatePresence>
-       } */}
+        {storyPageCount === 13 && !isMobile && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.2, ease: "easeIn" }}
+          >
+            {" "}
+            <video
+              src={`/Transitions/transition2.webm`}
+              autoPlay
+              loop={false}
+              muted
+              playsInline
+              className="absolute top-0 left-0 h-full w-full object-cover  "
+            ></video>
+          </motion.div>
+        )}
 
+        {storyPageCount === 13 && (
+          <div>
+            <img
+              className="absolute top-0 left-0 w-full h-full object-cover -z-9 fade-in"
+              src="/illustrations/sp14.gif"
+            />
+          </div>
+        )}
+   {/* {storyPageCount === 0 && ( */}
+          <video
+            src="/storypage/bgstorypage1.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute top-0 left-0 h-full w-full object-cover -z-10 "
+          ></video>
+        {/* )} */}
 
-{/* {
-        storyPageCount!==13&&storyPageCount > 0 &&<video
-          src={`${  storyPageCount < 13 ? "/storypage/Miyako Night.mp4": "/storypage/Miyako Fire.mp4" }`}
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute top-0 left-0 h-full w-full object-cover -z-10 "
-        ></video>
-        
-        }  */}
-
-       {/* {  storyPageCount > 0 && storyPageCount < 13 && <video
-         src= "/storypage/Miyako Night.mp4"
-         autoPlay
-         loop
-         muted
-         playsInline
-         className="absolute top-0 left-0 h-full w-full object-cover -z-10 "
-       ></video>} */}
-
-        {/* {storyPageCount===13 && playGif2 && <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.2, type:"tween" }}
-              > <img src="/Transitions/transition.gif"    onLoad={handleGifFinish}   className="absolute top-0 left-0 h-full w-full object-cover z-20 "/></motion.div> } */}
-      {storyPageCount===13 && !isMobile &&<motion.div
-
-initial={{ opacity: 0 }}
-animate={{ opacity: 1 }}
-transition={{ duration: 0.6, delay: 0.2, ease: 'easeIn' }}> <video
-                      src={`/Transitions/transition2.webm`}
-                      autoPlay
-                      loop={false}
-                      muted
-                      playsInline
-                      className="absolute top-0 left-0 h-full w-full object-cover  "
-                    ></video></motion.div> }
-
-        {storyPageCount===13 && <div
-             
-              ><img className="absolute top-0 left-0 w-full h-full object-cover -z-10" src="/illustrations/sp14.gif" /></div> }
-
-
-       {/* {  storyPageCount > 13 && <video
-         src= "/storypage/Miyako Fire.mp4"
-         autoPlay
-         loop
-         muted
-         playsInline
-         className="absolute top-0 left-0 h-full w-full object-cover -z-10 "
-       ></video>} */}
-        
- 
         {
-        storyPageCount!==13&& <video
-          src={`${
-            storyPageCount === 0 ? "/storypage/bgstorypage1.mp4":
-             storyPageCount < 13 ? "/storypage/Miyako Night.mp4": "/storypage/Miyako Fire.mp4"
-          }`}
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute top-0 left-0 h-full w-full object-cover -z-10 "
-        ></video>
-        
-        }
+        // storyPageCount !== 13 && 
+        storyPageCount !== 0 && (
+          <video
+
+            src="/storypage/Miyako Night.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute top-0 left-0 h-full w-full object-cover -z-10 fade-in"
+          ></video>
+        )}
+        {
+        // storyPageCount !== 13 && 
+        storyPageCount >13 && (
+          <video
+
+            src="/storypage/Miyako Fire.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute top-0 left-0 h-full w-full object-cover -z-10 fade-in"
+          ></video>
+        )}
+
 
 
       </div>
 
-
-     {/* Displaying the overlay for better readability*/}
+      {/* Displaying the overlay for better readability*/}
       <div className="overlay"></div>
 
-      {/* Displaying the PopUp StoryCard */}
-      {/* {storyPageCount===12 && playGif2 && <motion.div
-
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    transition={{ duration: 0.2, delay: 0.1, ease: 'easeIn' }}
-    > <img src="/Transitions/transition.gif"    onLoad={handleGifFinish}   className="absolute top-0 left-0 h-full w-full object-cover z-20 "/></motion.div> } */}
-      {storyPageCount===12 && !isMobile &&<
-        motion.div
-
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.4, delay: 0.5, ease: 'easeIn' }}
-      > <video
-                      src={`/Transitions/transition2.webm`}
-                      autoPlay
-                      loop={false}
-                      muted
-                      playsInline
-                      className="absolute top-0 left-0 h-full w-full object-cover   "
-                    ></video></motion.div> }
+     
+      {storyPageCount === 12 && !isMobile && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.4, delay: 0.5, ease: "easeIn" }}
+        >
+          {" "}
+          <video
+            src={`/Transitions/transition2.webm`}
+            autoPlay
+            loop={false}
+            muted
+            playsInline
+            className="absolute top-0 left-0 h-full w-full object-cover   "
+          ></video>
+        </motion.div>
+      )}
 
       {storyPageCount === 12 && (
         <motion.div
-
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8, delay: 1, ease: 'easeIn' }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 1, ease: "easeIn" }}
         >
-        <div className="absolute left-0 top-0 right-0 bottom-0 bg-black/[0.7] backdrop-blur-sm flex items-center justify-center">
-        <div className="max-w-[85%] lg:max-w-[50%] max-h-[60%] w-full h-full flex items-center justify-center relative">
-          <img className="w-full h-full" src="/illustrations/old_paper.png" />
-          <div className="w-full absolute z-[1] left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] text-[24px] lg:text-[1.75rem] 2xl:text-[2.5rem] text-center free-hand max-w-[80%] lg:max-w-[58%]">
-                     "For the sake of peace, under the Emperor's name, we invoke the
-                  'Night Law' tonight. Curse Masters hiding among us, use your
-                  forbidden arts to command Yōkai as your pawns and fight against
-                   other Curse Masters. After your battles, we will grant the wish of
-                   the one who achieves the most."
+          <div className="absolute left-0 top-0 right-0 bottom-0 bg-black/[0.7] backdrop-blur-sm flex items-center justify-center">
+            <div className="max-w-[85%] lg:max-w-[50%] max-h-[60%] w-full h-full flex items-center justify-center relative">
+              <img
+                className="w-full h-full"
+                src="/illustrations/old_paper.png"
+              />
+              <div className="w-full absolute z-[1] left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] text-[24px] lg:text-[1.75rem] 2xl:text-[2.5rem] text-center free-hand max-w-[80%] lg:max-w-[58%]">
+                "For the sake of peace, under the Emperor's name, we invoke the
+                'Night Law' tonight. Curse Masters hiding among us, use your
+                forbidden arts to command Yōkai as your pawns and fight against
+                other Curse Masters. After your battles, we will grant the wish
+                of the one who achieves the most."
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      </motion.div>
+        </motion.div>
       )}
 
-        {/* Displaying the HotSpot Points on Slide 15 */}
-      {
-        storyPageCount === 14 && <>
-          <HotSpot tooltip={'A MASSIVE BARRIER'} xoffset={43} yoffset={20}/>
-          <HotSpot tooltip={'A VILLAGE ON FIRE'} xoffset={60} yoffset={33}/>
+      {/* Displaying the HotSpot Points on Slide 15 */}
+      {storyPageCount === 14 && (
+        <>
+          <HotSpot tooltip={"A MASSIVE BARRIER"} xoffset={43} yoffset={20} />
+          <HotSpot tooltip={"A VILLAGE ON FIRE"} xoffset={60} yoffset={33} />
         </>
-      }
+      )}
 
-        {/* Displaying the last Page Logo on Slide 16 */}
+      {/* Displaying the last Page Logo on Slide 16 */}
       {storyPageCount === 15 && (
         <div className="overlay-last-page flex items-center justify-center absolute left-0 top-0 w-full h-full bg-black/[0.7] backdrop-filter backdrop-blur-sm">
           <div className="md:w-[780px] md:h-[246px] w-[343px] h-[108px]">
@@ -233,11 +213,11 @@ transition={{ duration: 0.6, delay: 0.2, ease: 'easeIn' }}> <video
         </div>
       )}
 
-      {storyPageCount === 15 &&<TheEnd/>}
+      {storyPageCount === 15 && <TheEnd />}
       <Header />
       <NextButton />
-      <ScreenTap/>
-      <ShowStories Story={Story}/>
+      <ScreenTap />
+      <ShowStories Story={Story} />
     </>
   );
 };
