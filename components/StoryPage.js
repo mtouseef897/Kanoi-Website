@@ -22,6 +22,7 @@ const StoryPage = () => {
   const [playGif2, setPlayGif2] = useState(false);
   const Story = Stories[storyPageCount];
   const classNamesArray = [
+    "img-hover-zoom--sp1",
     "img-hover-zoom--sp2",
     "img-hover-zoom--sp3",
     "img-hover-zoom--sp4",
@@ -31,6 +32,7 @@ const StoryPage = () => {
     "img-hover-zoom--sp8",
   ];
   const classNamesMobile = [
+    "mobile-story-mode--sp1",
     "mobile-story-mode--sp2",
     "mobile-story-mode--sp3",
     "mobile-story-mode--sp4",
@@ -67,14 +69,16 @@ const StoryPage = () => {
         className={`absolute top-0 left-0 h-full w-full 
         ${!isMobile ? "img-hover-zoom" : ""}
         ${
-          storyPageCount > 0 && !isMobile
-            ? classNamesArray[storyPageCount - 1]
+          // storyPageCount > 0 && 
+          !isMobile
+            ? classNamesArray[storyPageCount]
             : ""
         } 
         ${isMobile ? "mobile-story-mode" : ""}
         ${
-          storyPageCount > 0 && isMobile
-            ? classNamesMobile[storyPageCount - 1]
+          // storyPageCount > 0 && 
+          isMobile
+            ? classNamesMobile[storyPageCount]
             : ""
         }
         overflow-hidden`}

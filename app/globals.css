@@ -201,6 +201,12 @@ user-select: none;
   transform-origin: 50% 30%;
   transform: scale(1.12);
 }
+.img-hover-zoom--sp1 video {
+  transform-origin: 50% 30%;
+  transition: transform 1s , filter .5s ease-out;
+  transform: scale(2.4) translateX(12%) translateY(7%);
+
+}
 
 .img-hover-zoom--sp2 video {
   transform-origin: 50% 30%;
